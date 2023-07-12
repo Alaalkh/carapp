@@ -1,3 +1,4 @@
+import 'package:carapp/Pages/VerficiationPage.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -140,68 +141,111 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
           ),
-          Container(
-              padding: const EdgeInsets.only(left: 122, top: 20),
-              margin: const EdgeInsets.only(left: 33, right: 33, top: 88),
-              width: double.infinity,
-              height: 60,
-              decoration: BoxDecoration(
+          GestureDetector(onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>VerficationPage()));
+          },
+            child: Container(
+                padding: const EdgeInsets.only(left: 122, top: 20),
+                margin: const EdgeInsets.only(left: 33, right: 33, top: 88),
+                width: double.infinity,
+                height: 60,
+                decoration: BoxDecoration(
                   color: const Color(0xFF1DB854),
-
-                  borderRadius: BorderRadius.circular(38),),
-              child: const Text(
-                "Continue",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold),
-              )),
+                  borderRadius: BorderRadius.circular(38),
+                ),
+                child: const Text(
+                  "Continue",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold),
+                )),
+          ),
           Row(
             children: [
               Container(
-                margin: EdgeInsets.only(right: 33),
+                margin: const EdgeInsets.only(right: 33),
                 child: const Divider(
                   height: 20,
                   indent: 122,
                   endIndent: 133,
                   color: Color.fromARGB(255, 202, 201, 201),
                 ),
-
               ),
             ],
-          ), Container(
-            margin: EdgeInsets.only(right: 33),
-            child: const Divider(
-              height: 20,
-              indent: 122,
-              endIndent: 133,
-              color: Color.fromARGB(255, 202, 201, 201),
-            ),
-
           ),
+          Container(
+            margin: const EdgeInsets.only(top: 122),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                      child: const Divider(
+                    color: Color.fromARGB(255, 202, 201, 201),
+                    indent: 88,
+                  )),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(right: 4),
+                  child: const Text(
+                    "Login with",
+                    style: TextStyle(
+                      color: Color.fromARGB(255, 202, 201, 201),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    child: const Divider(
+                        color: Color.fromARGB(255, 202, 201, 201),
+                        endIndent: 77),
+                  ),
+                )
+              ],
+            ),
+          ),
+          Row(
+            children: [
+              Container(
+                child: Image.asset("assets/facebook.png",
+                    scale: 0.99,
+                    height: 100,
+                    width: 166,
+                    fit: BoxFit.scaleDown),
+                margin: const EdgeInsets.only(left: 66, top: 22),
+                width: 66,
+                height: 66,
+                decoration: const BoxDecoration(
+                    color: Color(0xFFFF1F2F3), shape: BoxShape.circle),
+              ),
+              Container(
+                child: Image.asset("assets/search.png",
+                    scale: 0.99,
+                    height: 100,
+                    width: 166,
+                    fit: BoxFit.scaleDown),
+                margin: const EdgeInsets.only(left: 22, top: 22),
+                width: 66,
+                height: 66,
+                decoration: const BoxDecoration(
+                    color: Color(0xFFFF1F2F3), shape: BoxShape.circle),
+              ),
+              Container(
+                child: Image.asset("assets/twitter.png",
+                    scale: 0.99,
+                    height: 100,
+                    width: 166,
+                    fit: BoxFit.scaleDown),
+                margin: const EdgeInsets.only(left: 22, top: 22),
+                width: 66,
+                height: 66,
+                decoration: const BoxDecoration(
+                    color: Color(0xFFFF1F2F3), shape: BoxShape.circle),
+              )
+            ],
+          )
         ],
       ),
-    );
-  }
-}
-
-class SocialMediaLogin extends StatelessWidget {
-  const SocialMediaLogin({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Container(
-              child: const Divider(
-                color: Colors.black,
-              ),
-            )
-          ],
-        )
-      ],
     );
   }
 }

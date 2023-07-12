@@ -2,8 +2,8 @@ import 'package:carapp/Pages/fullname-email.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class VerfucationPage extends StatelessWidget {
-  const VerfucationPage({super.key});
+class VerficationPage extends StatelessWidget {
+  const VerficationPage({super.key});
 
   @override
   Widget build(BuildContext context) {

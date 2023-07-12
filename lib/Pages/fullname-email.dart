@@ -1,3 +1,4 @@
+import 'package:carapp/Pages/Mylocation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -96,22 +97,27 @@ class Form extends StatelessWidget {
               ),
             ),
           ),
-        ), Container(
-            padding: const EdgeInsets.only(left: 122, top: 20),
-            margin: const EdgeInsets.only(left: 33, right: 33, top: 88),
-            width: double.infinity,
-            height: 60,
-            decoration: BoxDecoration(
-              color: const Color(0xFF1DB854),
+        ), GestureDetector(onTap: (){
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => MyLocation()));
+        },
+          child: Container(
+              padding: const EdgeInsets.only(left: 122, top: 20),
+              margin: const EdgeInsets.only(left: 33, right: 33, top: 88),
+              width: double.infinity,
+              height: 60,
+              decoration: BoxDecoration(
+                color: const Color(0xFF1DB854),
 
-              borderRadius: BorderRadius.circular(38),),
-            child: const Text(
-              "Continue",
-              style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold),
-            )),
+                borderRadius: BorderRadius.circular(38),),
+              child: const Text(
+                "Continue",
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 17,
+                    fontWeight: FontWeight.bold),
+              )),
+        ),
       ],
     );
   }
