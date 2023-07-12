@@ -147,7 +147,8 @@ class _LoginPageState extends State<LoginPage> {
               height: 60,
               decoration: BoxDecoration(
                   color: const Color(0xFF1DB854),
-                  borderRadius: BorderRadius.circular(38)),
+
+                  borderRadius: BorderRadius.circular(38),),
               child: const Text(
                 "Continue",
                 style: TextStyle(
@@ -155,7 +156,20 @@ class _LoginPageState extends State<LoginPage> {
                     fontSize: 17,
                     fontWeight: FontWeight.bold),
               )),
-          Container(
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.only(right: 33),
+                child: const Divider(
+                  height: 20,
+                  indent: 122,
+                  endIndent: 133,
+                  color: Color.fromARGB(255, 202, 201, 201),
+                ),
+
+              ),
+            ],
+          ), Container(
             margin: EdgeInsets.only(right: 33),
             child: const Divider(
               height: 20,
@@ -163,7 +177,8 @@ class _LoginPageState extends State<LoginPage> {
               endIndent: 133,
               color: Color.fromARGB(255, 202, 201, 201),
             ),
-          )
+
+          ),
         ],
       ),
     );
